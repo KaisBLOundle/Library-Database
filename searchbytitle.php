@@ -1,31 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>User Options</title>
-</head>
-<body>
-
-<form action="addoptions.php"  method = "post">
-
-  <!--Creates a drop down list-->
-  Student:<select name="Name">
-  <?php
-	include_once('connection.php');
-	$stmt = $conn->prepare("SELECT * FROM TblUsers WHERE role=0 ORDER BY Surname ASC");
-	$stmt->execute();
-	while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-	{
-		echo('<option value = '. $row["UserID"].'> '.$row["Forename"]." ".$row["Surname"]."</option>");
-	}
-
-    
-   ?>	
    
 
-</select>
+ <form action="borrowbytitle.php" method="post">
+    <input type="text" name="search" >
+    <input type="submit" value="Search for book">
+    
+ </form>
 
-  <input type="submit" value="Submit">
-</form>
 
-</body>
 </html>
