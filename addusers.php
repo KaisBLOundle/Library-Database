@@ -36,4 +36,5 @@ echo $_POST["year"]."<br>";
 echo $_POST["passwd"]."<br>";
 echo $_POST["role"]."<br>";
 ?>
-<a href="users.php" ></a>
+<a href="users.php" >Add another User</a>
+<a href="mainpage.php">Return to Main Page</a>

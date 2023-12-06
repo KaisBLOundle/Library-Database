@@ -30,5 +30,7 @@
         }
 
         ?>
+<a href="mainpage.php">Return to Main Page</a>
+    
 </body>
 </html>

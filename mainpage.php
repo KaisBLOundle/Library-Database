@@ -11,6 +11,10 @@
     <a href="searchbytitle.php">Search for book by title</a><br>
     <a href="searchbyauthor.php">Search for book by author</a><br>
     <a href="">Find a book by genre</a><br>
+    <?php
+    session_start();
+    echo( $_SESSION['name'])
+    ?>
 </body>
 
 </html>

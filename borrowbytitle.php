@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+	
 	<?php
-
+	session_start();
 	include_once("connection.php");
 	$searchErr = '';
 
@@ -16,8 +16,12 @@
 			$stmt->execute();
 			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 			
-			echo("<br>".' '.$row["Title"].' '. $row["Author"].' '.$row["Genre"]."<br>");
-			
+			echo("<br>");
+			echo("<br>". " Your book is:");
+			echo(' '.$row["Title"].' by '. $row["Author"].'/  Genre: '.$row["Genre"]."<br>");
+			$_SESSION['bID']=$row["BookID"];
+			echo( $_SESSION['bID']);
+
 			}
 
 		}
@@ -27,11 +31,14 @@
 			echo($searchErr);
 		}
 
-
+		
 	?>
-	<form action="borrow.php">
-		<input type="submit" value="Add book">
-	</form>
+	<p>If you would like to borrow this book you have a month to return it!!!!</p>
+	<form action="borrow.php" method="post">
+        Date Borrowed<input type="date" name=" Date"><br>
+        <input type="submit" value="Borrow Book">
+    </form>
+	<a href="mainpage.php">Return to Main Page</a>
 
 </html>
 

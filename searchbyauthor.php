@@ -2,7 +2,7 @@
 <html>
    
 
- <form action="borrowbytitle.php" method="post">
+ <form action="borrowbyauthor.php" method="post">
     <input type="text" name="search" >
     <input type="submit" value="Search for book">
     
