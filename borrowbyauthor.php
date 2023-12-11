@@ -38,6 +38,11 @@
         Date Borrowed<input type="date" name=" Date"><br>
         <input type="submit" value="Borrow Book">
     </form>
+
+	<p>If you have already borrowed this Book and would like to return it press here</p>
+	<form action="returnbook.php" method="post">
+		<input type="submit " value="returnbook">
+	</form>
 	<a href="mainpage.php">Return to Main Page</a>
 
 </html>
