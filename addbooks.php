@@ -28,3 +28,5 @@ $conn=null;
     echo("Submitted");
     ?>
 <form action="adduser.php" method = "post">
+<a href="books.php"> add another book</a><br>
+<a href="mainpage.php"> return to mainpage</a>

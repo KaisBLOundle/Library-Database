@@ -5,8 +5,7 @@
     session_start();
     include_once("connection.php");
     
-    $stmt = $conn->prepare("SELECT * FROM Tbluserbooks WHERE UserID like :userID  ");
-    $stmt->bindParam(':userID', $_SESSION['ID']);
+    $stmt = $conn->prepare("SELECT * FROM Tbluserbooks");
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         $num1 = $row['UserID'];
@@ -15,8 +14,6 @@
         echo($row['Date']);
         $timezone = date('Y-m-d H:i:s');
         $Date30 = date('Y-m-d', strtotime($Date. ' + 30 days'));
-        
-        
         if($Date30 < $timezone){
             echo("(Overdue)");
         }
@@ -48,5 +45,6 @@
     
     
 ?>
+<a href="adminhome.php">Return to admin page</a><br><br>
 <a href="mainpage.php">Return to Main Page</a>
 </html>

@@ -22,5 +22,6 @@
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
        
         ?>
+        <a href="mainpage.php"> return to mainpage</a>
 </body>
 </html>

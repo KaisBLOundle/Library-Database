@@ -3,20 +3,29 @@
 
 <head>
     <title> Mainpage</title>
-    <h1>Welcome to school libary</h1>
+<?php
+    session_start();
+    include_once("connection.php");
+
+    $stmt = $conn->prepare("SELECT * FROM Tblusers WHERE UserID like :userID  ");
+    $stmt->bindParam(':userID', $_SESSION['ID']);
+    $stmt->execute();
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
+        echo('<h1>Welcome to school library</h1>'.''.$row["Forename"]);
+    }
+?>
+    
 </head>
 <body>
-    <a href="users.php">Add a user</a><br>
-    <a href="books.php">Add a book to the Library</a><br>
-    <a href="searchbytitle.php">Search for book by title</a><br>
-    <a href="searchbyauthor.php">Search for book by author</a><br>
-    <a href="">Find a book by genre</a><br>
-    <a href="showuserbooks.php">Show all of the Wonderful books you have borrowed</a>
     <br>
+
+    <a href="login.php">Login</a><br>
+    <a href="searchbytitle.php">Search for book by title to borrow or return</a><br>
+    <a href="searchbyauthor.php">Search for book by author to borrow or return</a><br>
+    <a href="">Find a book by genre</a><br>
     <?php
     session_start();
-    echo( $_SESSION['ID'])
-
+    echo( $_SESSION['name'])
     ?>
 </body>
 

@@ -40,6 +40,10 @@
     </form>
 	<a href="mainpage.php">Return to Main Page</a>
 
+	<p>If you have already borrowed this Book and would like to return it press here</p>
+	<a href="returnbooks.php"><button>Return book</button></a>
+	<a href="mainpage.php">Return to Main Page</a>
+
 </html>
 
 
