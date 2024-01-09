@@ -23,9 +23,9 @@
     <a href="searchbytitle.php">Search for book by title to borrow or return</a><br>
     <a href="searchbyauthor.php">Search for book by author to borrow or return</a><br>
     <a href="">Find a book by genre</a><br>
+    <a href="showuserbooks.php">Show all the books you borrowed</a><br>
     <?php
-    session_start();
-    echo( $_SESSION['name'])
+    echo( $_SESSION['ID'])
     ?>
 </body>
 
