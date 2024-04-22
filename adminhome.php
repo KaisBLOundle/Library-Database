@@ -6,5 +6,6 @@
     <a href="books.php">add books to library</a><br>
     <a href="deleteusers.php">remove users</a><br>
     <a href="deletebooks.php">remove books</a><br>
+    <a href="mainpage.php">mainpage</a>
 
 </html>
